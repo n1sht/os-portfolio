@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: coffee --default;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float {
+  animation: float 1.8s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+.soft-pulse {
+  animation: softPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes slowDrift {
+  0% {
+    transform: scale(1.05) translateY(0px);
+  }
+  50% {
+    transform: scale(1.08) translateY(-15px);
+  }
+  100% {
+    transform: scale(1.05) translateY(0px);
+  }
+}
+
+@keyframes breatheLight {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.05);
+  }
+}
+
+.animate-slow-drift {
+  animation:
+    slowDrift 30s ease-in-out infinite,
+    breatheLight 8s ease-in-out infinite;
+}
